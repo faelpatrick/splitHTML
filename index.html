@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisor de HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toolbar">
+        <button id="toggleColumn1" onclick="toggleColumn('column1')">👁️ HTML Original</button>
+        <button id="toggleColumn2" onclick="toggleColumn('column2')">👁️ Partes Divididas</button>
+        <button id="toggleColumn3" onclick="toggleColumn('column3')">👁️ Partes Traduzidas</button>
+    </div>
+    <div class="container">
+        <div class="column" id="column1">
+            <textarea id="inputHTML" placeholder="Cole o conteúdo HTML aqui..."></textarea>
+            <button class="styled-button" onclick="processHTML()">Processar HTML</button>
+            <hr>
+            <textarea id="finalText" placeholder="Cole o texto final aqui..."></textarea>
+            <button class="styled-button" onclick="copyFinalText()">Copiar Texto Final</button>
+        </div>
+        <div class="column output" id="column2">
+            <!-- Textareas para o texto dividido serão adicionados aqui -->
+        </div>
+        <div class="column translated" id="column3">
+            <!-- Textareas para o texto traduzido serão adicionados aqui -->
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
