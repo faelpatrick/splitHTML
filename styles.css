@@ -84,3 +84,13 @@ body {
 .hidden {
 	display: none;
 }
+
+.clear-button {
+	background-color: #ff0000;
+	color: white;
+	border: none;
+	padding: 10px;
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+}
