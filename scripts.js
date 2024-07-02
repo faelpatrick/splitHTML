@@ -123,7 +123,6 @@ function copyFinalText() {
 	const finalText = document.getElementById('finalText');
 	finalText.select();
 	document.execCommand('copy');
-	alert('Texto final copiado para a área de transferência!');
 }
 
 function toggleColumn(columnId) {
