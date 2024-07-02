@@ -53,16 +53,13 @@ function loadFromLocalStorage() {
 }
 
 function clearAll() {
-	window.confirm('Tem certeza que deseja limpar tudo?',)
-	.then((y) => {
-		if (y) {
-			document.getElementById('inputHTML').value = '';
-			document.getElementById('finalText').value = '';
-			document.getElementById('column2').innerHTML = '';
-			document.getElementById('column3').innerHTML = '';
-			localStorage.clear();
-		}
-	});
+	if (confirm('Tem certeza que deseja limpar tudo?')) {
+		document.getElementById('inputHTML').value = '';
+		document.getElementById('finalText').value = '';
+		document.getElementById('column2').innerHTML = '';
+		document.getElementById('column3').innerHTML = '';
+		localStorage.clear();
+	}
 }
 
 window.onload = loadFromLocalStorage;
