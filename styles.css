@@ -1,3 +1,6 @@
+root {
+	--footer-height: 100px;
+}
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
@@ -5,23 +8,33 @@ body {
 	overflow-x: hidden;
 	background-color: #f8f9fa;
 	color: #333;
+	min-height: 100vh;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: calc(100vh - var(--footer-height));
+	overflow-x: auto;
 }
 .toolbar {
 	background-color: black;
 	color: white;
-	padding: 2rem;
+	padding: 1rem;
 	text-align: center;
 	display: flex;
 	justify-content: space-around;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .toolbar button {
-	background-color: #007BFF;
+	background: linear-gradient(to bottom, #007BFF, #007BFF, #0056b3);
 	color: white;
 	border: none;
-	padding: 10px;
+	padding: .6rem 1.5rem;
 	margin: 5px;
 	cursor: pointer;
 	border-radius: 5px;
+	font-size: 1rem;
 }
 .toolbar button.hidden {
 	background-color: #6c757d;
@@ -93,4 +106,21 @@ body {
 	margin: 5px;
 	cursor: pointer;
 	border-radius: 5px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 1rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	width: 100vw;
+	height: var(--footer-height));;
+	bottom: 0;
+}
+footer a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	
 }
